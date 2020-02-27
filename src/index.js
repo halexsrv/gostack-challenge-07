@@ -1,15 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 // import { Container } from './styles';
-
-export default function src() {
-  return (
-    <View style={styles.container}>
-      <Text>Test!</Text>
-    </View>
-  );
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -18,3 +10,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Test!</Text>
+    </View>
+  );
+}
