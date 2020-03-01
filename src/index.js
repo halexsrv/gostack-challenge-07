@@ -9,11 +9,13 @@ import Routes from './routes';
 import colors from './styles/colors';
 import store from './store';
 
+import Navigation from './services/navigation';
+
 export default function App() {
   return (
     <Provider store={store}>
       <StatusBar barStyle="light-content" backgroundColor={colors.dark} />
-      <Routes />
+      <Routes ref={navigationRef => Navigation.setNavigator(navigationRef)} />
     </Provider>
   );
 }

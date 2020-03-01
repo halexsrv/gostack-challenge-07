@@ -3,6 +3,7 @@ import { Alert } from 'react-native';
 
 import api from '../../../services/api';
 import { formatPrice } from '../../../util/format';
+import Navigation from '../../../services/navigation';
 
 import { addToCartSuccess, updateAmountSuccess } from './action';
 
@@ -35,6 +36,7 @@ function* addToCart({ id }) {
     };
 
     yield put(addToCartSuccess(data));
+    Navigation.navigate('Cart');
   }
 }
 
